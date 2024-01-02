@@ -4,6 +4,10 @@
     padding: 0;
 }
 
+.custom-fieldset:not(:first-of-type) {
+    margin-top: 1.5rem;
+}
+
 .custom-fieldset label {
     font-size: 1.25rem;
     font-weight: bold;
