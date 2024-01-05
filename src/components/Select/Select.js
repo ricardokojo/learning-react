@@ -4,7 +4,7 @@ function Select(props) {
     return (
         <fieldset className='custom-fieldset'>
             <label>{props.name}</label>
-            <select>
+            <select required={props.required} >
                 {
                     props.options.map(option => <option key={option} value={option}>{option}</option>)
                 }
