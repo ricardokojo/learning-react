@@ -13,10 +13,10 @@ function Form(props) {
     return (
         <form className="custom-form" onSubmit={onSubmit}>
             <h2>Preencha os dados para criar o card do colaborador.</h2>
-            <InputText name="Nome" placeholder="Digite seu nome" required={true} />
-            <InputText name="Cargo" placeholder="Digite seu cargo" required={true} />
-            <InputText name="Imagem" placeholder="Digite o endereco da imagem" />
-            <Select name="Time" options={props.teams} required={true} />
+            <InputText name="Nome" slug="name" placeholder="Digite seu nome" required={true} />
+            <InputText name="Cargo" slug="position" placeholder="Digite seu cargo" required={true} />
+            <InputText name="Imagem" slug="imageUrl" placeholder="Digite o endereco da imagem" />
+            <Select name="Time" slug="team" options={props.teams} required={true} />
             <Button>Criar card</Button>
         </form>
     )

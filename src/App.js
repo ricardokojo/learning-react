@@ -65,7 +65,14 @@ function App() {
         };
       })}/>
       {
-        teams.map(team => <Team key={team.name} team={team.name} primary={team.primary} secondary={team.secondary} />)
+        teams.map(team => <Team
+          key={team.slug}
+          slug={team.slug}
+          name={team.name}
+          primary={team.primary}
+          secondary={team.secondary}
+          members={members}
+        />)
       }
     </div>
   );
