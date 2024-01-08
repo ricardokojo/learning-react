@@ -1,0 +1,28 @@
+.card {
+    background-color: whitesmoke;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card header {
+    padding: 1rem;
+}
+
+.card header img {
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+}
+
+.card .content {
+    padding: 1rem;
+}
+
+.card .content h4 {
+    margin: 0;
+}
+
+.card .content h5 {
+    margin: 0;
+}
