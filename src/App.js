@@ -71,7 +71,7 @@ function App() {
           name={team.name}
           primary={team.primary}
           secondary={team.secondary}
-          members={members}
+          members={members.filter(member => member.team === team.slug)}
         />)
       }
     </div>
