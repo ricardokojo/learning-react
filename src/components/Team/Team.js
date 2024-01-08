@@ -8,11 +8,11 @@ function Team(props) {
             <ul>
             {props.members
                 .map(member =>
-                <li>
+                <li key={crypto.randomUUID()}>
                     <Card
                         color={props.secondary}
-                        name={member.name}
                         imageUrl={member.imageUrl}
+                        name={member.name}
                         position={member.position}
                     />
                 </li>)}
