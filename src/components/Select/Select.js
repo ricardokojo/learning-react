@@ -8,8 +8,9 @@ function Select(props) {
         <fieldset className='custom-fieldset'>
             <label>{props.name}</label>
             <select name={slug} required={props.required} >
+                <option value="">Selecione um time</option>
                 {
-                    props.options.map(option => <option key={option} value={option}>{option}</option>)
+                    props.options.map(option => <option key={option.name} value={option.slug}>{option.name}</option>)
                 }
             </select>
         </fieldset>

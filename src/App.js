@@ -14,44 +14,56 @@ function App() {
     {
       name: 'Backend',
       primary: '#ffadad',
-      secondary: 'coral'
+      secondary: 'coral',
+      slug: 'backend',
     },
     {
       name: 'Frontend',
       primary: '#ffd6a5',
-      secondary: 'orange'
+      secondary: 'orange',
+      slug: 'frontend',
     },
     {
       name: 'Ciência de Dados',
       primary: '#fdffb6',
-      secondary: 'gold'
+      secondary: 'gold',
+      slug: 'ciencia-de-dados',
     },
     {
       name: 'DevOps',
       primary: '#caffbf',
-      secondary: 'green'
+      secondary: 'green',
+      slug: 'devops',
     },
     {
       name: 'UX e Design',
       primary: '#9bf6ff',
-      secondary: 'skyblue'
+      secondary: 'skyblue',
+      slug: 'ux-e-design',
     },
     {
       name: 'Mobile',
       primary: '#a0c4ff',
-      secondary: 'royalblue'
+      secondary: 'royalblue',
+      slug: 'mobile',
     },
     {
       name: 'Inovacão',
-      primary: 'bdb2ff',
-      secondary: 'purple'
+      primary: '#bdb2ff',
+      secondary: 'purple',
+      slug: 'inovacao',
     },
   ];
 
   return (
     <div className="App">
       <Banner />
-      <Form onAddMember={onAddMember} />
+      <Form onAddMember={onAddMember} teams={teams.map(team => {
+        return {
+          name: team.name,
+          slug: team.slug
+        };
+      })}/>
       {
         teams.map(team => <Team key={team.name} team={team.name} primary={team.primary} secondary={team.secondary} />)
       }

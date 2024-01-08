@@ -4,16 +4,6 @@ import Select from "../Select/Select";
 import './Form.css';
 
 function Form(props) {
-    const teams = [
-        'Backend',
-        'Frontend',
-        'Ciência de Dados',
-        'DevOps',
-        'UX e Design',
-        'Mobile',
-        'Inovacão'
-    ];
-
     const onSubmit = (e) => {
         e.preventDefault();
         const formData = new FormData(e.target);
@@ -26,7 +16,7 @@ function Form(props) {
             <InputText name="Nome" placeholder="Digite seu nome" required={true} />
             <InputText name="Cargo" placeholder="Digite seu cargo" required={true} />
             <InputText name="Imagem" placeholder="Digite o endereco da imagem" />
-            <Select name="Time" options={teams} required={true} />
+            <Select name="Time" options={props.teams} required={true} />
             <Button>Criar card</Button>
         </form>
     )
