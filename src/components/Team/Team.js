@@ -7,7 +7,12 @@ function Team(props) {
             <h3 style={{ borderBottomColor: props.secondary }}>{props.name}</h3>
             {props.members
                 .filter(member => member.team === props.slug)
-                .map(member => <Card />)}
+                .map(member => <Card
+                    color={props.secondary}
+                    name={member.name}
+                    imageUrl={member.imageUrl}
+                    position={member.position}
+                />)}
         </section>
     )
 }

@@ -1,14 +1,14 @@
 import './Card.css';
 
-function Card() {
+function Card(props) {
     return (
         <div className='card'>
-            <header>
-                <img src='https://github.com/ricardokojo.png'/>
+            <header style={{ background: `linear-gradient(to top, transparent 50%, ${props.color} 50% 100%`}}>
+                <img src={props.imageUrl} />
             </header>
             <div class='content'>
-                <h4>Ricardo Kojo</h4>
-                <h5>Desenvolvedor Frontend</h5>
+                <h4>{props.name}</h4>
+                <h5>{props.position}</h5>
             </div>
         </div>
     );
