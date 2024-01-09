@@ -1,6 +1,13 @@
 .team {
     padding: 1rem;
+    position: relative;
     text-align: center;
+}
+
+.team .color-picker {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
 }
 
 .team h3 {
