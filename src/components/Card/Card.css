@@ -8,6 +8,14 @@
 .card header {
     border-radius: 10px 10px 0 0;
     padding: 1rem;
+    position: relative;
+}
+
+.card header .delete {
+    cursor: pointer;
+    position: absolute;
+    right: 0.25rem;
+    top: 0.25rem;
 }
 
 .card header img {

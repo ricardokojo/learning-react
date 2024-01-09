@@ -13,6 +13,7 @@ function Form(props) {
     return (
         <form className="custom-form" onSubmit={onSubmit}>
             <h2>Preencha os dados para criar o card do colaborador.</h2>
+            <input type="hidden" name="id" value={crypto.randomUUID()} />
             <InputText name="Nome" slug="name" placeholder="Digite seu nome" required={true} />
             <InputText name="Cargo" slug="position" placeholder="Digite seu cargo" required={true} />
             <InputText name="Imagem" slug="imageUrl" placeholder="Digite o endereco da imagem" />

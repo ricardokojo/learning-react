@@ -10,6 +10,10 @@ function App() {
     setMembers([...members, member]);
   }
 
+  const onDeleteMember = (id) => {
+    setMembers([...members.filter(m => m.id !== id)]);
+  }
+
   const teams = [
     {
       name: 'Backend',
@@ -71,6 +75,7 @@ function App() {
           name={team.name}
           primary={team.primary}
           secondary={team.secondary}
+          onDeleteMember={onDeleteMember}
           members={members.filter(member => member.team === team.slug)}
         />)
       }
